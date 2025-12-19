@@ -39,7 +39,30 @@ chat-backend/
 ├── logs/               # Application logs
 └── package.json        # Dependencies
 
+Environment Variables
 
+Create a .env file in the root directory:
+
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database
+MONGODB_URI=mongodb://localhost:27017/chat_app
+REDIS_URL=redis://localhost:6379
+
+# JWT
+JWT_SECRET=your_super_secret_jwt_key_change_in_production
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_SECRET=your_refresh_secret_key_change_in_production
+JWT_REFRESH_EXPIRES_IN=30d
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Logging
+LOG_LEVEL=info
 
 REST API Endpoints
 
