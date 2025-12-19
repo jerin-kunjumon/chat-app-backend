@@ -16,3 +16,98 @@
 2025-12-19 21:29:48 [INFO]: MongoDB Connected: localhost {
   "service": "chat-backend"
 }
+2025-12-19 22:16:22 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 22:16:22 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
+2025-12-19 22:16:45 [INFO]: POST /api/auth/register {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7462"
+}
+2025-12-19 22:16:45 [ERROR]: Registration error: next is not a function {
+  "service": "chat-backend",
+  "stack": "TypeError: next is not a function\n    at model.<anonymous> (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/models/User.js:60:5)\n    at async Kareem.execPre (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\kareem\\index.js:65:24)\n    at async model.$__save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:369:5)\n    at async model.save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:609:5)\n    at async register (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/controllers/authController.js:41:5)"
+}
+2025-12-19 22:18:04 [INFO]: POST /api/auth/register {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:18:04 [ERROR]: Registration error: next is not a function {
+  "service": "chat-backend",
+  "stack": "TypeError: next is not a function\n    at model.<anonymous> (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/models/User.js:60:5)\n    at async Kareem.execPre (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\kareem\\index.js:65:24)\n    at async model.$__save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:369:5)\n    at async model.save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:609:5)\n    at async register (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/controllers/authController.js:41:5)"
+}
+2025-12-19 22:19:02 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 22:19:02 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
+2025-12-19 22:19:36 [INFO]: POST /api/auth/register {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:19:36 [INFO]: User registered: john_doe (69458220e2f2f5110dbd46bd) {
+  "service": "chat-backend",
+  "userId": "69458220e2f2f5110dbd46bd",
+  "email": "john@example.com"
+}
+2025-12-19 22:20:17 [INFO]: POST /api/auth/login {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:20:17 [INFO]: User logged in: john_doe (69458220e2f2f5110dbd46bd) {
+  "service": "chat-backend",
+  "userId": "69458220e2f2f5110dbd46bd",
+  "email": "john@example.com"
+}
+2025-12-19 22:22:01 [INFO]: POST /api/auth/register {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:22:01 [INFO]: User registered: jerin_doe (694582b1e2f2f5110dbd46c2) {
+  "service": "chat-backend",
+  "userId": "694582b1e2f2f5110dbd46c2",
+  "email": "jerin@example.com"
+}
+2025-12-19 22:22:26 [INFO]: POST /api/auth/login {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:22:26 [INFO]: User logged in: jerin_doe (694582b1e2f2f5110dbd46c2) {
+  "service": "chat-backend",
+  "userId": "694582b1e2f2f5110dbd46c2",
+  "email": "jerin@example.com"
+}
+2025-12-19 22:23:10 [INFO]: POST /api/messages/send {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:23:10 [ERROR]: Send message error: next is not a function {
+  "service": "chat-backend",
+  "stack": "TypeError: next is not a function\n    at model.<anonymous> (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/models/Chat.js:80:3)\n    at Kareem.execPre (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\kareem\\index.js:63:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async model.$__save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:369:5)\n    at async model.save (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:609:5)\n    at async C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:2722:9\n    at async Promise.all (index 0)\n    at async Function.create (C:\\Users\\Jerin\\Jerin docs\\Software DeveloperJob\\MERN Stack Projects\\MERN Chat App\\chat_backend\\node_modules\\mongoose\\lib\\model.js:2707:11)\n    at async chatSchema.statics.findOrCreate (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/models/Chat.js:140:12)\n    at async sendMessage (file:///C:/Users/Jerin/Jerin%20docs/Software%20DeveloperJob/MERN%20Stack%20Projects/MERN%20Chat%20App/chat_backend/src/controllers/messageController.js:50:14)"
+}
+2025-12-19 22:23:57 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 22:23:57 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
+2025-12-19 22:24:01 [INFO]: POST /api/messages/send {
+  "service": "chat-backend",
+  "ip": "::1",
+  "userAgent": "curl/8.12.1"
+}
+2025-12-19 22:24:01 [INFO]: Message sent from 69458220e2f2f5110dbd46bd to 694582b1e2f2f5110dbd46c2 {
+  "service": "chat-backend",
+  "messageId": "69458329c72ab65a91e3c136",
+  "chatId": "69458329c72ab65a91e3c139"
+}

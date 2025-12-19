@@ -72,12 +72,11 @@ chatSchema.index({ isGroup: 1 });
 chatSchema.index({ 'participants': 1, 'lastActivity': -1 });
 
 // Pre-save middleware to sort participants for consistency
-chatSchema.pre('save', function(next) {
+chatSchema.pre('save', function() {
   if (this.participants && this.participants.length > 0) {
     this.participants.sort();
   }
   this.updatedAt = Date.now();
-  next();
 });
 
 // Method to check if user is participant
