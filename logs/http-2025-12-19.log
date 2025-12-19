@@ -1,0 +1,18 @@
+2025-12-19 21:24:22 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 21:24:22 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
+2025-12-19 21:28:59 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 21:28:59 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
+2025-12-19 21:29:48 [INFO]: Server running on port 3000 in development mode {
+  "service": "chat-backend"
+}
+2025-12-19 21:29:48 [INFO]: MongoDB Connected: localhost {
+  "service": "chat-backend"
+}
