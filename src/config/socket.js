@@ -4,7 +4,7 @@ import User from '../models/User.js';
 import Message from '../models/Message.js';
 import Chat from '../models/Chat.js';
 
-// Store online users in memory (for scalability, use Redis in production)
+
 const onlineUsers = new Map();
 
 const authenticateSocket = async (socket, next) => {
