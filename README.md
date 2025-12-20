@@ -4,6 +4,7 @@ Real-Time Chat Backend
 A production-ready, scalable real-time chat backend built with Node.js, Socket.IO, and MongoDB. This backend supports one-to-one messaging, online status tracking, message persistence, and comprehensive user management.
 
 Features
+
 JWT Authentication - Secure authentication for both REST API and WebSocket connections
 
 Real-time Messaging - Instant message delivery using Socket.IO
@@ -100,7 +101,7 @@ Socket.IO Events
 
 Client → Server Events
 
-Event	Data Format	Description
+Event	  Data Format	  Description
 authenticate	{ token: string }	Authenticate socket connection
 join_chat	{ chatId: string }	Join specific chat room
 send_message	{ to: string, content: string, chatId?: string }	Send message to user
@@ -110,7 +111,8 @@ update_status	{ status: string }	Update user status
 disconnect	-	User disconnected
 
 Server → Client Events
-Event	Data Format	Description
+
+Event	  Data Format	  Description
 authenticated	{ user: object }	Authentication successful
 new_message	{ messageId, sender, content, timestamp }	New message received
 message_sent	{ messageId, chatId, timestamp }	Message sent confirmation
