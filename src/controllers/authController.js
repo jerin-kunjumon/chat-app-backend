@@ -5,8 +5,7 @@ import {
   generateRefreshToken, 
   verifyToken,
   generatePasswordResetToken,
-  hashResetToken,
-  generateEmailVerificationToken,
+  hashResetToken
 } from '../utils/jwt.js';
 import logger from '../utils/logger.js';
 import { userValidation } from '../utils/validators.js';
@@ -201,10 +200,7 @@ export const refreshToken = async (req, res) => {
 // Logout user
 export const logout = async (req, res) => {
   try {
-    // In a real implementation, you might want to:
-    // 1. Add the token to a blacklist (if using token blacklisting)
-    // 2. Clear session data
-    // 3. Update user status
+
     
     const user = req.user;
     
@@ -330,9 +326,6 @@ export const changePassword = async (req, res) => {
     user.password = newPassword;
     await user.save();
 
-    // Invalidate old tokens (optional - depends on your security requirements)
-    // You could add the old token to a blacklist here
-
     logger.info(`Password changed for user: ${user.username} (${user._id})`);
 
     res.json({
@@ -351,26 +344,25 @@ export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
 
-    // Find user by email
+    
     const user = await User.findOne({ email });
     
     if (!user) {
-      // Don't reveal that user doesn't exist (security best practice)
       return res.json({
         message: 'If an account exists with this email, you will receive a password reset link',
       });
     }
 
-    // Generate reset token
+    
     const resetToken = generatePasswordResetToken();
     const hashedToken = hashResetToken(resetToken);
 
-    // Save reset token and expiry to user (you need to add these fields to User model)
+    
     user.resetPasswordToken = hashedToken;
     user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
     await user.save();
 
-    // In a real implementation, send email with reset link
+    
     const resetUrl = `${process.env.CLIENT_URL}/reset-password?token=${resetToken}`;
     
     logger.info(`Password reset requested for: ${user.email}`, {
@@ -378,7 +370,7 @@ export const forgotPassword = async (req, res) => {
       resetUrl,
     });
 
-    // TODO: Send email with resetUrl
+    
     console.log(`Password reset URL for ${user.email}: ${resetUrl}`);
 
     res.json({
@@ -397,10 +389,10 @@ export const resetPassword = async (req, res) => {
   try {
     const { token, password } = req.body;
 
-    // Hash the provided token to compare with stored hash
+    
     const hashedToken = hashResetToken(token);
 
-    // Find user with valid reset token
+    
     const user = await User.findOne({
       resetPasswordToken: hashedToken,
       resetPasswordExpires: { $gt: Date.now() },
@@ -418,7 +410,7 @@ export const resetPassword = async (req, res) => {
     user.resetPasswordExpires = undefined;
     await user.save();
 
-    // Invalidate all existing sessions/tokens (optional)
+    
 
     logger.info(`Password reset successful for user: ${user.username} (${user._id})`);
 
@@ -475,7 +467,7 @@ export const deactivateAccount = async (req, res) => {
   }
 };
 
-// Export all controllers
+
 export default {
   register,
   login,

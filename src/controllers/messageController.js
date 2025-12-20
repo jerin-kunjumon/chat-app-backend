@@ -138,7 +138,7 @@ export const getConversation = async (req, res) => {
     // Get or create chat
     const chat = await Chat.findOrCreate(currentUserId, userId);
 
-    // Mark messages as read (optional - could be a separate endpoint)
+    
     // await Message.updateMany(
     //   {
     //     sender: userId,
@@ -155,7 +155,7 @@ export const getConversation = async (req, res) => {
 
     res.json({
       data: {
-        messages: messages.reverse(), // Return in chronological order
+        messages: messages.reverse(),
         chat: {
           id: chat._id,
           participants: chat.participants,
